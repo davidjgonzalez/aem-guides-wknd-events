@@ -1,0 +1,4 @@
+<div class="wrapper" *ngIf="hasImage">
+  <img class="image" [src]="src" [alt]="alt" [title]="imageTitle"/>
+  <span class="caption" *ngIf="imageCaption">{{imageCaption}}</span>
+</div>

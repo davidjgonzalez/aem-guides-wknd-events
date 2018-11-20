@@ -1,0 +1,36 @@
+@import "~src/app/styles/shared";
+
+:host-context() {
+    display:  block;
+
+    @include component-padding();
+}
+ 
+.item {
+    float: left;
+    font-size: $lead-font-size;
+    list-style: none;
+    margin-bottom: 1em;
+    padding: 4px; 
+    width: 100%;
+
+    &:hover {
+        background-color: #f7f7f7;
+    }
+}
+
+.item-link {
+    color: $color-primary;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.item-date {
+    color: $color-secondary;
+    float:left;
+    font-size: $base-font-size;
+    width: 100%;
+}    
