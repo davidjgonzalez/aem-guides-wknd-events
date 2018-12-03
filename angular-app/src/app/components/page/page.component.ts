@@ -16,6 +16,9 @@ export class PageComponent implements OnInit {
     // Get the data set by the AemPageDataResolver in the Router
     const path = route.snapshot.data.path;
 
+    // Get the JSON data for the ActivatedRoute's path from ModelManager.
+    // If the data exists in the JSON retrieved from ModelManager.initialize() that data will be used.
+    // else ModelManager handles retrieving the data from AEM.
     ModelManager.getData(path).then((data) => {
       // Get the data well need to populate the template (which includes an Angular AemPageComponent
 
